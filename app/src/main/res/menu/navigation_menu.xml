@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+    <item
+        android:id="@+id/menu_import_student"
+        android:icon="@drawable/ic_menu"
+        android:title="@string/importStudent" />
+    <item
+        android:id="@+id/menu_schedule_exam"
+        android:icon="@drawable/ic_menu"
+        android:title="@string/scheduleExam" />
+    <item
+        android:id="@+id/menu_generate_sit_no"
+        android:icon="@drawable/ic_menu"
+        android:title="@string/generateSitNo" />
+    <item
+        android:id="@+id/menu_import_que_ans"
+        android:icon="@drawable/ic_menu"
+        android:title="@string/importQuePaperAns" />
+
+    <item
+        android:id="@+id/menu_generate_que_set"
+        android:icon="@drawable/ic_menu"
+        android:title="@string/generateQueSet" />
+
+    <item
+        android:id="@+id/menu_approve_reject"
+        android:icon="@drawable/ic_menu"
+        android:title="@string/approveReject" />
+    </group>
+<!--    <group android:checkableBehavior="single">    </group>-->
+
+
+    <!--    <item android:title="@string/dateTimePicker">-->
+<!--        <menu>-->
+<!--            <item-->
+<!--                android:id="@+id/menu_dp"-->
+<!--                android:icon="@drawable/ic_date_picker"-->
+<!--                android:title="@string/dp" />-->
+<!--            <item-->
+<!--                android:id="@+id/menu_tp"-->
+<!--                android:icon="@drawable/ic_time_picker"-->
+<!--                android:title="@string/tp" />-->
+<!--        </menu>-->
+<!--    </item>-->
+<!--    <group-->
+<!--        android:id="@+id/group1"-->
+<!--        android:checkableBehavior="single">-->
+<!--        <item-->
+<!--            android:id="@+id/menu_sp"-->
+<!--            android:icon="@drawable/ic_spinner"-->
+<!--            android:title="@string/sp" />-->
+<!--    </group>-->
+</menu>

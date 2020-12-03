@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardview1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_5dp"
+    android:elevation="@dimen/margin_5dp"
+    card_view:cardBackgroundColor="@color/white"
+    card_view:cardCornerRadius="@dimen/margin_5dp"
+    card_view:cardElevation="@dimen/margin_5dp">
+
+    <LinearLayout
+        android:id="@+id/ll_profile_card"
+        android:layout_width="match_parent"
+        android:background="@drawable/rounded_adapter"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_5dp"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_5dp">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:maxLines="1"
+            android:text=""
+            android:background="@drawable/rounded_name_adapter"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:weightSum="5.5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="2"
+                android:text="@string/mobileno"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight=".2"
+                android:gravity="center"
+                android:text=":"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/tv_mobile_no"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="3.3"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceSmall"></TextView>
+        </TableRow>
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_mobile_no"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text=""-->
+<!--            android:textAppearance="?android:attr/textAppearanceSmall" />-->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:weightSum="5.5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="2"
+                android:text="@string/email"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight=".2"
+                android:gravity="center"
+                android:text=":"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/tv_email_id"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="3.3"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceSmall"></TextView>
+        </TableRow>
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_email_id"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text=""-->
+<!--            android:textAppearance="?android:attr/textAppearanceSmall" />-->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:weightSum="5.5">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="2"
+                android:text="@string/dateOfAdmission"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight=".2"
+                android:gravity="center"
+                android:text=":"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/tv_admission_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="3.3"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceSmall"></TextView>
+        </TableRow>
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_admission_date"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text=""-->
+<!--            android:textAppearance="?android:attr/textAppearanceSmall" />-->
+
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

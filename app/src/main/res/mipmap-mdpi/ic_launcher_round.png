@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ws.school.mate">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <application
+        android:allowBackup="true"
+        android:debuggable="false"
+        android:usesCleartextTraffic="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/icon"
+        android:supportsRtl="true"
+        android:testOnly="false"
+        android:theme="@style/AppTheme"
+        android:windowSoftInputMode="stateAlwaysHidden"
+        tools:ignore="HardcodedDebugMode">
+        <activity android:name="com.ws.school.mate.Activity.AssignClassSubject"></activity>
+        <activity android:name="com.ws.school.mate.Activity.ReportsActivity" />
+        <activity android:name="com.ws.school.mate.Activity.AddComplaintActivity" />
+        <activity android:name="com.ws.school.mate.Activity.ComplaintsActivity" />
+        <activity android:name="com.ws.school.mate.Activity.TeacherSchoolBusActivity" />
+        <activity android:name="com.ws.school.mate.Activity.AdminAssignStudDr" />
+        <activity android:name="com.ws.school.mate.Activity.AddRouteActivity" />
+        <activity android:name="com.ws.school.mate.Activity.AdminDrDetailsActivity" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <activity
+            android:name="com.ws.school.mate.Activity.ParentSchoolBusActivity"
+            android:label="@string/title_activity_maps" />
+
+        <activity android:name="com.ws.school.mate.Activity.AdminSchoolBusActivity" />
+        <activity android:name="com.ws.school.mate.Activity.DrFailureActivity" />
+        <activity android:name="com.ws.school.mate.Activity.DrRouteDetailsActivity" />
+        <activity android:name="com.ws.school.mate.Activity.DrPickupActivity" />
+        <activity android:name="com.ws.school.mate.Activity.DrStartStopActivity" /

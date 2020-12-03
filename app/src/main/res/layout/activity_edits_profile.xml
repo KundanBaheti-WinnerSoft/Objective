@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EditsProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/frame_logo"
+                android:layout_centerInParent="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:visibility="visible"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/firstName"
+                            android:textColor="#999999"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/edt_fname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-4dp"
+                            android:layout_marginRight="-4dp"
+                            android:inputType="text"
+                            android:maxLength="50"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/middleName"
+                            android:textColor="#999999"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/edt_mname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-4dp"
+                            android:layout_marginRight="-4dp"
+                            android:inputType="text"
+                            android:maxLength="50"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lastName"
+                            android:textColor="#999999"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/edt_lname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-4dp"
+                            android:layout_marginRight="-4dp"
+                            android:inputType="text"
+                            android:maxLength="50"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/motherName"
+                            android:textColor="#999999"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/edt_mother_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-4dp"
+                            android:layout_marginRight="-4dp"
+                            android:inputType="text"
+                            android:maxLength="50"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dob"
+                            android:textColor="#999999"
+                            android:textStyle="bold" />
+                        <EditText
+                            android:focusable="false"
+                            android:id="@+id/edt_birth_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top"
+                            android:hint="@string/selDob"
+                            android:layout_marginLeft="-4dp"
+                            android:layout_marginRight="-4dp"
+                            android:inputType="date"
+                            android:maxLength="50"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dateOfAdmission"
+                            android:textColor="#999999"
+                            android:textStyle="bold" />
+                        <EditText
+                            android:focusable="false"
+                            android:id="@+id/edt_date_admission"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top"
+                            android:hint="@string/selDateOfAdmission"
+                            android:layout_marginLeft="-4dp"
+                            android:layout_marginRight="-4dp"
+                            android:inputType="date"
+                            android:maxLength="50"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/gender" />
+
+                            <RadioGroup
+                                android:id="@+id/rg_gender"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rb_male"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:text="@string/male" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_female"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:text="@string/female" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/email"
+                            android:textColor="#999999"
+                            android:textStyle="bold" />
+
+
+                        <EditText
+                            android:id="@+id/edt_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-4dp"
+                            android:layout_marginRight="-4dp"
+                            android:maxLength="50"
+                            android:maxLines="1"
+                            android:inputType="textEmailAddress"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mobileno"
+                            android:textColor="#999999"
+                            android:textStyle="bold" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:text="+91"
+                                android:textColor="@color/black"/>
+                            <EditText
+                                android:layout_weight="1.8"
+                                android:id="@+id/edt_mobileno"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-4dp"
+                                android:layout_marginRight="-4dp"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <!--                        <TextView-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:text="@string/selQualification"-->
+                        <!--                            android:textColor="#999999"-->
+                        <!--                            android:textStyle="bold" />-->
+                        <fr.ganfra.materialspinner.MaterialSpinner
+                            android:id="@+id/spn_qualification"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            app:ms_arrowColor="@color/text_color"
+                            app:ms_baseColor="@color/text_color"
+                            app:ms_errorColor="@color/red"
+                            app:ms_floatingLabelColor="@color/text_color"
+                            app:ms_floatingLabelText="@string/selQualification"
+                            app:ms_highlightColor="@color/text_color"
+                            app:ms_hint="@string/selQualification"
+                            android:tooltipText="@string/selQualification"
+                            app:ms_multiline="false" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/emergencyMobileno"
+                            android:textColor="#999999"
+                            android:textStyle="bold" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
+                                android:text="+91"
+                                android:textColor="@color/black"/>
+                            <EditText
+                                android:layout_weight="1.8"
+                                android:id="@+id/edt_emr_mobileno"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-4dp"
+                                android:layout_marginRight="-4dp"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <!--                        <TextView-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:text="@string/qualification"-->
+                        <!--                            android:textColor="#999999"-->
+                        <!--                            android:textStyle="bold" />-->
+                        <!--                        <EditText-->
+                        <!--                            android:id="@+id/edt_qualification"-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_marginLeft="-4dp"-->
+                        <!--                            android:layout_marginRight="-4dp"-->
+                        <!--                            android:maxLength="50"-->
+                        <!--                            android:maxLines="1"-->
+                        <!--                            android:inputType="textEmailAddress"-->
+                        <!--                            android:singleLine="true"-->
+                        <!--                            android:textColor="@color/black"-->
+                        <!--                            android:textStyle="bold" />-->
+                        <!--                        <View-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="10dp" />-->
+                        <!--                        <TextView-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:text="@string/selQualification"-->
+                        <!--                            android:textColor="#999999"-->
+                        <!--                            android:textStyle="bold" />-->
+                        <fr.ganfra.materialspinner.MaterialSpinner
+                            android:id="@+id/spn_blood_group"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            app:ms_arrowColor="@color/text_color"
+                            app:ms_baseColor="@color/text_color"
+                            app:ms_errorColor="@color/red"
+                            app:ms_floatingLabelColor="@color/text_color"
+                            app:ms_floatingLabelText="@string/selBloodGrp"
+                            app:ms_highlightColor="@color/text_color"
+                            app:ms_hint="@string/selBloodGrp"
+                            android:tooltipText="@string/selBloodGrp"
+                            app:ms_multiline="false" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/selCountry"
+                            android:textColor="#999999"
+                            android:textStyle="bold" />
+                        <EditText
+                            android:id="@+id/edt_country"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:gravity="top"
+                            android:maxLength="20"
+                            android:maxLines="3"
+                            android:minLines="1"
+                            android:text="@string/india"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:visibility="visible" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <!--                        <TextView-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:text="@string/selState"-->
+                        <!--                            android:textColor="#999999"-->
+                        <!--                            android:textStyle="bold" />-->
+                        <fr.ganfra.materialspinner.MaterialSpinner
+                            android:id="@+id/spn_state"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            app:ms_arrowColor="@color/text_color"
+                            app:ms_baseColor="@color/text_color"
+                            app:ms_errorColor="@color/red"
+                            app:ms_floatingLabelColor="@color/text_color"
+                            app:ms_floatingLabelText="@string/selState"
+                            app:ms_highlightColor="@color/text_color"
+                            app:ms_hint="@string/selState"
+                            android:tooltipText="@string/selState"
+                            app:ms_multiline="false" />
+
+                        <!--                        <TextView-->
+                        <!--                            android:visibility="gone"-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:text="@string/selDistrict"-->
+                        <!--                            android:textColor="#999999"-->
+                        <!--                            android:textStyle="bold" />-->
+                        <fr.ganfra.materialspinner.MaterialSpinner
+                            android:id="@+id/spn_district"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:visibility="gone"
+                            app:ms_arrowColor="@color/text_color"
+                            app:ms_baseColor="@color/text_color"
+                            app:ms_errorColor="@color/red"
+                            app:ms_floatingLabelColor="@color/text_color"
+                            app:ms_floatingLabelText="@string/selDistrict"
+                            app:ms_highlightColor="@color/text_color"
+                            app:ms_hint="@string/selDistrict"
+                            android:tooltipText="@string/selDistrict"
+                            app:ms_multiline="false" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/address"
+                            android:textColor="#999999"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/edt_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border"
+                            android:gravity="top|left"
+                            android:inputType="text|textMultiLine|textCapSentences|textAutoCorrect"
+                            android:maxLength="200"
+                            android:maxLines="10"
+                            android:scrollbars="vertical"
+                            android:scrollbarStyle="insideOverlay"
+                            android:fadeScrollbars="true"
+                            android:fadingEdge="vertical"
+                            android:minLines="5"
+                            android:padding="5dp"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"></EditText>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <Button
+                            android:id="@+id/btn_update"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="-4dp"
+                            android:layout_marginRight="-4dp"
+                            android:background="@drawable/rounded_corners"
+                            android:text="U P D A T E"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

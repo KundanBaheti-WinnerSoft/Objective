@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.winnersoft.objective">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:resizeableActivity="false"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ApplyCourseStudent"
+            android:parentActivityName=".ApplyForCourseActivity"></activity>
+        <activity
+            android:name=".ApplyForCourseActivity"
+            android:parentActivityName=".StudentDashboard" />
+        <activity
+            android:name=".QuestionSetGeneration"
+            android:parentActivityName=".ExamControllerDashoard" />
+        <activity
+            android:name=".EditScheduleExamActivity"
+            android:parentActivityName=".ScheduleExamActivity" />
+        <activity
+            android:name=".AddScheduleExam"
+            android:parentActivityName=".ScheduleExamActivity" />
+        <activity
+            android:name=".EditCourseActivity"
+            android:parentActivityName=".CourseActivity" />
+        <activity
+            android:name=".AddCourse"
+            android:parentActivityName=".CourseActivity" />
+        <activity android:name=".AddExamControllerActivity" />
+        <activity
+            android:name=".EditsProfileActivity"
+            android:parentActivityName=".ExamControllersList" />
+        <activity
+            android:name=".ExamControllerProfileActivity"
+            android:parentActivityName=".ExamControllersList" />
+        <activity
+            android:name=".CourseActivity"
+            android:parentActivityName=".ExamControllerDashoard" />
+        <activity
+            android:name=".UserRegistration"
+            android:parentActivityName=".UserRegistrationList" />
+        <activity
+            android:name=".UserRegistrationList"
+            android:parentActivityName=".ExamControllerDashoard" />
+        <activity android:name=".ExamControllersList" />
+        <activity android:name=".AdminHome" />
+        <activity android:name=".StudentDashboard" />
+        <activity android:name=".ExamControllerDashoard" />
+        <activity android:name=".ApproveRejectExamActivity" />
+        <activity
+            android:name=".GenerateSitNoActivity"
+            android:parentActivityName=".ExamControllerDashoard" />
+        <activity
+            android:name=".ScheduleExamActivity"
+            android:parentActivityName=".ExamControllerDashoard" />
+        <activity android:name=".NavigationDrawerActivity" />
+        <activity android:name=".ForgotPasswordActivity" />
+        <activity android:name=".QuizScreenActivity" />
+        <activity
+            android:name=".OnlineExamActivity"
+            android:parentActivityName=".StudentDashboard" />
+        <activity android:name=".RegistrationActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

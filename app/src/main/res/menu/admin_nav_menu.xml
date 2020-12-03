@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_importStudent"
+            android:icon="@drawable/ic_menu"
+            android:title="@string/importStudent" />
+        <item
+            android:id="@+id/nav_scheduleExam"
+            android:icon="@drawable/ic_menu"
+            android:title="@string/scheduleExam" />
+
+        <item
+            android:id="@+id/nav_generateSitNo"
+            android:icon="@drawable/ic_menu"
+            android:title="@string/generateSitNo" />
+        <item
+            android:id="@+id/nav_importQuePaperAns"
+            android:icon="@drawable/ic_menu"
+            android:title="@string/importQuePaperAns" />
+        <item
+            android:id="@+id/nav_generateQueSet"
+            android:icon="@drawable/ic_menu"
+            android:title="@string/generateQueSet" />
+        <item
+            android:id="@+id/nav_approveReject"
+            android:icon="@drawable/ic_menu"
+            android:title="@string/approveReject" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_menu"
+            android:title="@string/logout" />
+    </group>
+
+<!--    <item android:title="Communicate">-->
+<!--        <menu>-->
+<!--            <item-->
+<!--                android:id="@+id/nav_share"-->
+<!--                android:icon="@drawable/ic_menu_share"-->
+<!--                android:title="@string/menu_share" />-->
+<!--            <item-->
+<!--                android:id="@+id/nav_logout"-->
+<!--                android:icon="@drawable/ic_menu_send"-->
+<!--                android:title="@string/logout" />-->
+<!--        </menu>-->
+<!--    </item>-->
+
+</menu>
