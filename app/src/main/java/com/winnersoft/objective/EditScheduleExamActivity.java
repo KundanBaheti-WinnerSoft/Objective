@@ -349,7 +349,12 @@ public class EditScheduleExamActivity extends AppCompatActivity {
         nameListCourse.clear();
         if (commonCode.checkConnection(EditScheduleExamActivity.this)) {
             final ArrayList<HashMap<String, String>> arraymap = new ArrayList<>();
-            String jsonurl = urllink.url + "Course/getAllCourse";
+            //            original
+//            getall course name list
+//            String jsonurl = urllink.url + "Course/getAllCourse";
+
+            //list of courses added by particular exam controller
+            String jsonurl = urllink.url + "Course/getAllCourseByExController";
             RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
             progressDialog = new ProgressDialog(EditScheduleExamActivity.this);
             progressDialog.setMessage(getResources().getString(R.string.loading));
@@ -424,7 +429,14 @@ public class EditScheduleExamActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), getResources().getString(R.string.serverError), Toast.LENGTH_LONG).show();
                     }
                 }
-            });
+            }){
+                @Override
+                public Map<String, String> getHeaders() throws AuthFailureError {
+                    Map<String, String> params = new HashMap<String, String>();
+                    params.put("x-Auth-token", SecurityToken);
+                    return params;
+                }
+            };
             requestQueue.add(jsonArrayRequest);
         } else {
             commonCode.AlertDialog_Pbtn(EditScheduleExamActivity.this, getResources().getString(R.string.noInternetConnection), getResources().getString(R.string.plsConnectToInternet), getResources().getString(R.string.ok));

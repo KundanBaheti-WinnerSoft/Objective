@@ -118,11 +118,14 @@ public class CourseActivity extends AppCompatActivity implements ItemClickListen
     }
 
     private void getAllCourse(){
-//        jsonurl = urllink.url + "regVolunteer/getAll";
-        jsonurl = urllink.url + "Course/getAll";
+        //original
+        //getall course list
+//        jsonurl = urllink.url + "Course/getAll";
+
+        //list of courses added by particular exam controller
+        jsonurl = urllink.url + "Course/getAllCourseByExC";
         arraymap.clear();
         if (commonCode.checkConnection(getApplicationContext())) {
-            //        jsonurl = urllink.url + "regVolunteer/getAll";
             RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
             progressDialog = new ProgressDialog(CourseActivity.this);
             progressDialog.setMessage(getResources().getString(R.string.loading));
@@ -135,11 +138,11 @@ public class CourseActivity extends AppCompatActivity implements ItemClickListen
                     arraymap.clear();
                     progressDialog.dismiss();
                     if (response.length() > 0) {
-//[{"id":17,"firstname":"Amol","middlename":"r","lastname":"Kharade","role":"Volunteer","mobileno":"7350911692","emailid":"amolkharade@gmail.com","birthdate":1561939200000,"country":"India","state":"Dadra and Nagar Haveli","city":"pune","gender":"Male","pincode":"231232","address":"Teerth Technospace, Mumbai - Pune Highway, Baner","image":"Image-yMz2032.jpg","area":"baner","userId":{"id":79,"emailId":null,"loginName":"7350911692","mobileNumber":null,"passwdString":"1234","oldpasswdString":null,"userType":{"userTypeName":"volunteer","id":2},"roles":[{"id":76,"roleDescription":null,"roleName":null}],"userRoles":null,"org_status":null,"inactive_deactivate":true},"admin":{"id":23,"firstname":"Adv.Kishor ","middlename":"Nanasaheb","lastname":"Shinde","role":"Administrator","mobileno":"9011282424","emailid":"mhsjanhit@gmail.com","birthdate":584755200000,"country":"India","state":"Maharashtra","city":"Pune","gender":"Male","pincode":"411028","address":"Bhusari Colony,Kothrud, Pune","image":"Image-PLn2386.jpg","area":"Pune","userId":{"id":77,"emailId":null,"loginName":"9011282424","mobileNumber":null,"passwdString":"1234","oldpasswdString":null,"userType":{"userTypeName":"Administrator","id":1},"roles":[{"id":74,"roleDescription":null,"roleName":null}],"userRoles":null,"org_status":null,"inactive_deactivate":true}}},{"id":18,"firstname":"Deepak","middlename":"pqr","lastname":"Singh","role":"Volunteer","mobileno":"9890281726","emailid":"kennyhrx7@gmail.com","birthdate":1562025600000,"country":"India","state":"Delhi","city":"vdvs","gender":"Male","pincode":"797949","address":"Vsvsbs","image":"Image-tol8651.jpg","area":"hzbzbv","userId":{"id":82,"emailId":null,"loginName":"9890281726","mobileNumber":null,"passwdString":"1234","oldpasswdString":null,"userType":{"userTypeName":"volunteer","id":2},"roles":[{"id":79,"roleDescription":null,"roleName":null}],"userRoles":null,"org_status":null,"inactive_deactivate":true},"admin":{"id":23,"firstname":"Adv.Kishor ","middlename":"Nanasaheb","lastname":"Shinde","role":"Administrator","mobileno":"9011282424","emailid":"mhsjanhit@gmail.com","birthdate":584755200000,"country":"India","state":"Maharashtra","city":"Pune","gender":"Male","pincode":"411028","address":"Bhusari Colony,Kothrud, Pune","image":"Image-PLn2386.jpg","area":"Pune","userId":{"id":77,"emailId":null,"loginName":"9011282424","mobileNumber":null,"passwdString":"1234","oldpasswdString":null,"userType":{"userTypeName":"Administrator","id":1},"roles":[{"id":74,"roleDescription":null,"roleName":null}],"userRoles":null,"org_status":null,"inactive_deactivate":true}}}]
                         for (int i = 0; i < response.length(); i++) {
                             try {
                                 HashMap<String, String> hashMap = new HashMap<>();
                                 JSONObject object = response.getJSONObject(i);
+//                                original
                                 hashMap.put("courseCode", object.getString("courseCode"));
                                 hashMap.put("id", object.getString("id"));
                                 hashMap.put("courseName", object.getString("courseName"));
@@ -147,9 +150,20 @@ public class CourseActivity extends AppCompatActivity implements ItemClickListen
                                 hashMap.put("duration", object.getString("duration"));
                                 hashMap.put("fees", object.getString("fees"));
 
-//                                JSONObject userObj = object.getJSONObject("userType");
-//                                hashMap.put("userId", userObj.getString("id"));
-//                                hashMap.put("userTypeName", userObj.getString("userTypeName"));
+
+                                //new after dependancies add
+//                                JSONObject courseId = object.getJSONObject("courseId");
+//                                hashMap.put("id", courseId.getString("id"));
+//                                hashMap.put("courseName", courseId.getString("courseName"));
+//                                hashMap.put("courseDesc", courseId.getString("courseDesc"));
+//                                hashMap.put("duration", courseId.getString("duration"));
+//                                hashMap.put("fees", courseId.getString("fees"));
+                                JSONObject userObj = object.getJSONObject("examcontroller_user_id");
+                                hashMap.put("userId", userObj.getString("id"));
+                                hashMap.put("loginName", userObj.getString("loginName"));
+
+                                JSONObject userType = userObj.getJSONObject("userType");
+                                hashMap.put("userTypeName", userType.getString("userTypeName"));
 
 //                                hashMap.put("userTypeName", String.valueOf(userObj.getBoolean("inactive_deactivate")));
 
@@ -159,7 +173,7 @@ public class CourseActivity extends AppCompatActivity implements ItemClickListen
                             }
                         }
                     } else {
-                        commonCode.AlertDialog_Pbtn(CourseActivity.this, getResources().getString(R.string.notFound), getResources().getString(R.string.examControllerNotFound), getResources().getString(R.string.ok));
+                        commonCode.AlertDialog_Pbtn(CourseActivity.this, getResources().getString(R.string.notFound), getResources().getString(R.string.noDataFound), getResources().getString(R.string.ok));
                     }
                     showdata(arraymap);
                 }

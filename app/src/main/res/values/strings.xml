@@ -64,7 +64,7 @@
     <string name="plsRegiFirst">Please register first.</string>
     <string name="importStudent">Import student</string>
     <string name="scheduleExam">Schedule Exam</string>
-    <string name="generateSitNo">Generate Sit Number</string>
+    <string name="generateSitNo">Generate Seat Number</string>
     <string name="importQuePaperAns"><![CDATA[Import question paper & answer]]></string>
     <string name="generateQueSet">Generate question set</string>
     <string name="approveReject"><![CDATA[Approve & reject]]></string>
@@ -153,7 +153,7 @@
     <string name="selCourse">Select course</string>
     <string name="status">Status</string>
     <string name="dateOfExam">Date of Exam</string>
-    <string name="sitNoGenerated">Sit number generated</string>
+    <string name="sitNoGenerated">Seat number generated</string>
     <string name="plsContactAdminForIssue">Please Contact to Admin for Issue.</string>
     <string name="selOrganization">Select organization</string>
     <string name="selStartDate">Select start date</string>
@@ -187,4 +187,5 @@
     <string name="doYouWantToGenerateQueSet">Do you want to generate question set ?</string>
     <string name="doYouWantToApplyForThisCourse">Do you want to apply for this course !</string>
     <string name="apply">Apply</string>
+    <string name="noDataFound">No data found.</string>
 </resources>

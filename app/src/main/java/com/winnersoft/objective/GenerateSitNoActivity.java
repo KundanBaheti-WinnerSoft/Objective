@@ -144,7 +144,12 @@ public class GenerateSitNoActivity extends AppCompatActivity implements ItemClic
     private void getAllList() {
         arraymap.clear();
         if (commonCode.checkConnection(GenerateSitNoActivity.this)) {
-            String jsonurl = urllink.url + "stdExamCenterAllocation1/getAllSeatNumberAllocation";
+            //original
+            //getall generate seat no. list
+//            String jsonurl = urllink.url + "stdExamCenterAllocation1/getAllSeatNumberAllocation";
+
+            //list of scheduled exams added by particular exam controller
+            String jsonurl = urllink.url + "stdExamCenterAllocation1/getAllSeatNumberAllocationByExamC";
             RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
             progressDialog = new ProgressDialog(GenerateSitNoActivity.this);
             progressDialog.setMessage(getResources().getString(R.string.loading));
