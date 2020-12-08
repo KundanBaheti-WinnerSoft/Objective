@@ -188,4 +188,7 @@
     <string name="doYouWantToApplyForThisCourse">Do you want to apply for this course !</string>
     <string name="apply">Apply</string>
     <string name="noDataFound">No data found.</string>
+    <string name="totalRegStudentCount">Total Registered Students Count</string>
+    <string name="coursewiseStudentData">Coursewise Student Data</string>
+    <string name="regStudentsCount">Registered Students Count</string>
 </resources>

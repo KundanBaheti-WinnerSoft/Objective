@@ -112,7 +112,7 @@ public class ApplyCourseStudent extends AppCompatActivity implements ItemClickLi
                             }
                         }
                     } else {
-                        commonCode.AlertDialog_Pbtn(ApplyCourseStudent.this, getResources().getString(R.string.notFound), getResources().getString(R.string.examControllerNotFound), getResources().getString(R.string.ok));
+                        commonCode.AlertDialog_Pbtn(ApplyCourseStudent.this, getResources().getString(R.string.notFound), getResources().getString(R.string.noDataFound), getResources().getString(R.string.ok));
                     }
                     showdata(arraymap);
                 }
