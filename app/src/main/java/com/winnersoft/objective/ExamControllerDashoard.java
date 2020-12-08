@@ -12,7 +12,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class ExamControllerDashoard extends AppCompatActivity {
-    private CardView cvUserRegistration,cvCourse,cvScheduleExam,cvGenerateSitNo,cvQuestionSetGeneration;
+    private CardView cvUserRegistration,cvCourse,cvScheduleExam,cvGenerateSitNo,cvQuestionSetGeneration,cvStudents;
     ImageView ivLogout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +65,16 @@ public class ExamControllerDashoard extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        cvStudents=findViewById(R.id.cv_students);
+        cvStudents.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent students=new Intent(ExamControllerDashoard.this,StudentsActivity.class);
+                startActivity(students);
+            }
+        });
+
 
         ivLogout=findViewById(R.id.iv_logout);
         ivLogout.setOnClickListener(new View.OnClickListener() {

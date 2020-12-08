@@ -17,8 +17,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ApplyCourseStudent"
-            android:parentActivityName=".ApplyForCourseActivity"></activity>
+        <activity android:name=".StudentsActivity"></activity>
+        <activity
+            android:name=".ApplyCourseStudent"
+            android:parentActivityName=".ApplyForCourseActivity" />
         <activity
             android:name=".ApplyForCourseActivity"
             android:parentActivityName=".StudentDashboard" />
