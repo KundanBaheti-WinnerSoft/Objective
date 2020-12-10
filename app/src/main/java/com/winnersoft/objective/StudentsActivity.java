@@ -82,6 +82,7 @@ public class StudentsActivity extends AppCompatActivity implements ItemClickList
         super.onRestart();
         getExamCotrollerCourseList();
     }
+
     private void getExamCotrollerCourseList() {
         arraymapCourse.clear();
         nameListCourse.clear();
@@ -149,10 +150,10 @@ public class StudentsActivity extends AppCompatActivity implements ItemClickList
                                     courseName = "";
                                     spnCourse.setSelection(0);
                                     trRegCount.setVisibility(View.GONE);
-                                    arraymap.clear();
-
+                                    getCoursewiseStudentData();
 
                                 }
+
 
                                 //    Toast.makeText(RegistrationActivity.this, arraymapClass.get(position).get("id"), Toast.LENGTH_LONG).show();
 
@@ -201,7 +202,9 @@ public class StudentsActivity extends AppCompatActivity implements ItemClickList
     }
 
     private void getCoursewiseStudentData() {
-
+        if (courseId == 0) {
+            arraymap.clear();
+        } else {
             jsonurl = urllink.url + "studentCourse/getStudentsByCourse/" + courseId;
             arraymap.clear();
             if (commonCode.checkConnection(getApplicationContext())) {
@@ -290,7 +293,7 @@ public class StudentsActivity extends AppCompatActivity implements ItemClickList
             } else {
                 commonCode.AlertDialog_Pbtn(StudentsActivity.this, getResources().getString(R.string.noInternetConnection), getResources().getString(R.string.plsConnectToInternet), getResources().getString(R.string.ok));
             }
-
+        }
     }
 
     private void showdata(ArrayList<HashMap<String, String>> arraymap) {
